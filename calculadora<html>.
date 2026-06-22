@@ -6,12 +6,74 @@
             <button>0</button>
             <button>1</button>
             <button>2</button>
-
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
     </div>
 
     <div class="operacoes">
-
-
-    
+            <button>+</button>
+            <button>-</button>
+            <button>x</button>
+            <button>/</button>
     </div>
+
+<style>
+        
+
+        .calculadora{
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 15px;
+            position: absolute;
+            left: 500px;
+            top: 150px;
+        }
+
+        .visor{
+            width: 220px;
+            height: 40px;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .botoes{
+            display: flex;
+            gap: 10px;
+        }
+
+        .numeros{
+            display: grid;
+            grid-template-columns: repeat(3, 50px);
+            gap: 5px;
+        }
+
+        .operacoes{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .numeros button{
+            background-color: red;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+        }
+
+        .operacoes button{
+            background-color: blue;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+        }
+
+</style>
+
 </html>
