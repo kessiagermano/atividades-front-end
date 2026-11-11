@@ -13,10 +13,10 @@
 <conteudo>
     <botoes>
         <div class="divisao">
-            <button >login</button>
+            <button onclick="goOn('login.html')">login</button>
         </div>
         <div class="divisao">
-            <button >cadastro</button>
+            <button onclick="goOn('login.html')">cadastro</button>
         </div>
     </botoes>
 </conteudo>
@@ -109,7 +109,12 @@ html{
         background-color: #3266ae;
 
 }
-
-
 </style>
+
+<script>
+    function goOn(link){
+        window.location.href = link;
+    }
+</script>
+
 </html></html>

@@ -1,124 +1,72 @@
-<html>
-<html lang="pt-BR">
+
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+
     <style>
-        /* Reset de estilos básicos */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Times New Roman', Times, serif; /* Fonte com serifa semelhante à imagem */
         }
 
         body {
-            background-color: #2b5cb3; /* Azul do fundo principal */
+            background-color: #2b5cb3;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            font-family: Arial, sans-serif;
         }
 
-        /* Faixa do Topo */
         header {
-            background-color: #1a428a; /* Azul mais escuro do topo */
-            width: 100%;
-            padding: 25px 0;
+            background-color: #1a428a;
+            padding: 25px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: white;
         }
 
-        header h1 {
-            color: #ffffff;
-            font-size: 2.5rem;
-            letter-spacing: 2px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        /* Área Central dos Botões */
         main {
-            flex-grow: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 60px; /* Espaçamento entre os botões */
-            padding: 20px;
+            gap: 60px;
         }
 
-        /* Estilização dos Botões */
         .btn-cadastro {
-            background-color: #12316c; /* Azul escuro de dentro do botão */
-            color: #ffffff;
-            font-size: 1.3rem;
-            font-weight: bold;
-            text-transform: uppercase;
+            background-color: #12316c;
+            color: white;
             text-decoration: none;
             padding: 18px 45px;
-            border-radius: 50px; /* Bordas totalmente arredondadas */
-            min-width: 240px;
-            text-align: center;
-            letter-spacing: 1px;
-            transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
-            
-            /* Sombra sutil imitando o efeito da imagem */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+            border-radius: 50px;
+            font-size: 22px;
         }
 
-        /* Efeito ao passar o mouse (Hover) */
-        .btn-cadastro:hover {
-            background-color: #0d2553;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-        }
-
-        /* Efeito ao clicar */
-        .btn-cadastro:active {
-            transform: translateY(1px);
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Faixa do Rodapé */
         footer {
-            background-color: #1a428a; /* Mesmo azul escuro do topo */
-            width: 100%;
+            background-color: #1a428a;
             height: 45px;
-        }
-
-        /* Responsividade para telas menores (Celulares) */
-        @media (max-width: 600px) {
-            main {
-                flex-direction: column;
-                gap: 25px;
-            }
-            
-            header h1 {
-                font-size: 2rem;
-            }
-
-            .btn-cadastro {
-                width: 100%;
-                max-width: 280px;
-            }
         }
     </style>
 </head>
+
 <body>
 
-    <!-- Topo da página -->
     <header>
         <h1>Cadastro</h1>
     </header>
 
-    <!-- Conteúdo principal com os botões -->
     <main>
-        <a href="#cadastro-administrador" class="btn-cadastro">Administrador</a>
-        <a href="#cadastro-aluno" class="btn-cadastro">Aluno</a>
+        <a href="#cadastro-administrador" class="btn-cadastro">
+            Administrador
+        </a>
+
+        <a href="#cadastro-aluno" class="btn-cadastro">
+            Aluno
+        </a>
     </main>
 
-    <!-- Rodapé decorativo -->
     <footer></footer>
 
 </body>
