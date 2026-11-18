@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Pedido</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3265a8;
+            color: #fff4c4;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #07509a;
+            text-align: center;
+            padding: 15px;
+        }
+
+        header h1 {
+            font-family: Georgia, serif;
+            font-size: 65px;
+        }
+
+        main {
+            flex: 1;
+            padding: 10px 18px 20px;
+        }
+
+        .btn-voltar {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .colunas {
+            display: flex;
+            justify-content: space-between;
+            gap: 35px;
+        }
+
+        .coluna {
+            width: 50%;
+        }
+
+        h2 {
+            font-family: Georgia, serif;
+            font-size: 40px;
+            margin-top: 5px;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 23px;
+            margin-bottom: 12px;
+            gap: 8px;
+        }
+
+        .preco-acao {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+
+        button {
+            background-color: rgb(255, 196, 0);
+            color: white;
+            cursor: pointer;
+        }
+
+        .item button {
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 25px;
+        }
+
+        footer {
+            background-color: #07509a;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 8px;
+            gap: 10px;
+        }
+
+        #total {
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .btn-enviar {
+            background-color: #3e568c;
+            border: none;
+            border-radius: 30px;
+            padding: 5px 20px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 40px;
+            }
+
+            .colunas {
+                flex-direction: column;
+            }
+
+            .coluna {
+                width: 100%;
+            }
+
+            .item {
+                font-size: 18px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            footer {
+                position: sticky;
+                bottom: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Area do Pedido</h1>
+    </header>
+
+    <main>
+
+        <button class="btn-voltar" onclick="history.back()">↩</button>
+
+        <div class="colunas">
+
+            <div class="coluna">
+
+                <h2>Esquentados</h2>
+
+                <div class="item">
+                    <span>Hambúrguer</span>
+                    <div class="preco-acao">
+                        <span>R$7,00</span>
+                        <button onclick="adicionar(7.00)">+</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <span>Mini-pizza</span>
+                    <div class="preco-acao">
+                        <span>R$5,00</span>
+                        <button onclick="adicionar(5.00)">+</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <span>Pão de queijo</span>
+                    <div class="preco-acao">
+                        <span>R$3,00</span>
+                        <button onclick="adicionar(3.00)">+</button>
+                    </div>
+                </div>
+
+                <h2>Outros</h2>
+
+                <div class="item">
+                    <span>Torcida</span>
+                    <div class="preco-acao">
+                        <span>R$2,50</span>
+                        <button onclick="adicionar(2.50)">+</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <span>Trento</span>
+                    <div class="preco-acao">
+                        <span>R$2,00</span>
+                        <button onclick="adicionar(2.00)">+</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <span>Chips</span>
+                    <div class="preco-acao">
+                        <span>R$4,00</span>
+                        <button onclick="adicionar(4.00)">+</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <span>Pé de moleque</span>
+                    <div class="preco-acao">
+                        <span>R$1,50</span>
+                        <button onclick="adicionar(1.50)">+</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <span>Paçoquinha</span>
+                    <div class="preco-acao">
+                        <span>R$0,50</span>
+                        <button onclick="adicionar(0.50)">+</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="coluna">
+
+                <h2>Gelados</h2>
+
+                <div class="item">
+                    <span>Suco de laranja N 500ml</span>
+                    <div class="preco-acao">
+                        <span>R$4,50</span>
+                        <button onclick="adicionar(4.50)">+</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <span>Sprite 500ml</span>
+                    <div class="preco-acao">
+                        <span>R$6,00</span>
+                        <button onclick="adicionar(6.00)">+</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <span>Chá gelado de pêssego 500ml</span>
+                    <div class="preco-acao">
+                        <span>R$3,00</span>
+                        <button onclick="adicionar(3.00)">+</button>
+                    </div>
+                </div>
+
+                <h2>Outros</h2>
+
+                <div class="item">
+                    <span>H20 500ml</span>
+                    <div class="preco-acao">
+                        <span>R$4,50</span>
+                        <button onclick="adicionar(4.50)">+</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <span>Suco de uva N 500ml</span>
+                    <div class="preco-acao">
+                        <span>R$4,50</span>
+                        <button onclick="adicionar(4.50)">+</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <span>Toddynho</span>
+                    <div class="preco-acao">
+                        <span>R$1,00</span>
+                        <button onclick="adicionar(1.00)">+</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <span>Gatorade</span>
+                    <div class="preco-acao">
+                        <span>R$2,50</span>
+                        <button onclick="adicionar(2.50)">+</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <span>Iorgute natural 350 ml</span>
+                    <div class="preco-acao">
+                        <span>R$2,50</span>
+                        <button onclick="adicionar(2.50)">+</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <span id="total">R$0,00</span>
+        <button class="btn-enviar" onclick="enviarPedido()">Enviar</button>
+    </footer>
+
+    <script>
+        let total = 0;
+
+        function adicionar(valor) {
+            total = total + valor;
+
+            document.getElementById("total").innerText =
+                "R$" + total.toFixed(2).replace(".", ",");
+        }
+
+        function enviarPedido() {
+            if (total == 0) {
+                alert("Adicione algum produto ao pedido!");
+            } else {
+                alert("Pedido enviado! Total: R$" +
+                    total.toFixed(2).replace(".", ","));
+            }
+        }
+    </script>
+
+</body>
+</html>
